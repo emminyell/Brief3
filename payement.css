@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Allerta+Stencil&family=DM+Sans:opsz,wght@9..40,700&family=Lato:wght@300;400;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-decoration: none;
+}
+.logo{
+    font-family:'Allerta Stencil';
+    font-size: 22px;
+    color:#A18A68;
+    display: flex;
+    justify-content: flex-start;
+    align-items:first baseline ;
+
+}
+.logo span{
+    font-family:'Allerta Stencil';
+    font-size: 22px;
+    color:#686AA1;
+}
+
+header nav {
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 50px;
+    padding-right: 50px;
+    margin-bottom: 10px;
+}
+header nav .logo {
+    margin: 20px 0;
+}
+header nav .items {
+    display: flex;
+}
+header nav ul {
+    display: flex;
+    align-items: center;
+    margin-right: 30px;
+    gap: 40px;
+    border-right: 2px solid #6666665e;
+    padding-right: 30px;
+}
+header nav ul li {
+    list-style: none;
+}
+header nav ul li a {
+    color: black;
+    text-decoration: none;
+    transition: 0.3 ease;
+}
+header nav ul li a:hover{
+    color: #686AA1;
+    
+}
+header nav .search-wrapper svg:first-child {
+    margin-right: 15px;
+}
+header nav .search-wrapper svg:last-child {
+    margin-left: 15px;
+}
+main{
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+    margin:  20px 20px 20px 20px;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+}
+h1 {
+    font-size: 20px;
+    background-color: #A18A68;
+    color: #fff;
+    text-align: center;
+}
+main p{
+    font-size: 20px;
+    color: black;
+    text-align: center;
+}
+main span{
+    color: #A18A68;
+    font-size: 1.2em;
+}
+    
+.info{
+        background-color: #fff;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        padding: 20px;
+        margin: 10px;
+        width: 400px;
+        margin-bottom: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+}
+.info img{
+    width: 200px;
+    height: 150px;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+label {
+    margin: 5px 0;
+}
+
+input {
+    width: 50%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+button {
+    background-color: #A18A68;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+button:hover {
+    background-color: #686AA1;
+}
+
+
+footer{
+    margin-left: 30px;
+    gap: 40px;
+    border-top: 2px solid #6666665e;
+    padding-left: 30px; 
+    padding-top: 80px;
+    display: flex;
+    justify-content: space-between;
+    width: 98%;
+}
+footer .menu {
+    display:flex;
+    gap: 20px;
+    text-decoration: none;
+    padding-bottom: 20px;
+}
+footer .menu a{
+    color: grey;
+    text-decoration: none;
+}
+.footer{
+    display: flex;  
+    justify-content: space-between;
+    margin: 20px 0;
+    color: #707070;
+}
+.top{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom:8px ;
+    margin-bottom: 10px;
+    border-bottom: #333 solid 1px;
+}
+.input{
+    width: 30%;
+}
+.email{
+    border: none;
+    width: 300px;
+}
+.social{
+    display: flex;
+    justify-content: end;
+    gap: 10px;
+    margin-top: 20px;
+}
+@media (max-width: 769px){
+    header nav {
+        display: flex;
+        justify-content: space-between;
+    }
+    nav .items .search-wrapper a svg{
+        width: 15px;
+    }
+    #ul-appended{
+        display: none;
+    }
+    footer{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 31px 42px;
+    }
+    footer .input{
+        margin-right: 10px;
+        align-self: center;
+    }
+    .email {
+        width: 209px;
+    }
+}
