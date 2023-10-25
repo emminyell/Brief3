@@ -40,13 +40,13 @@
             <span>Payment Information</span>
             <form>
                 <label for="card">Credit Card Number</label>
-                <input type="text" id="card" placeholder="1234 5678 9012 3456">
+                <input type="text" id="card" placeholder="1234 5678 9012 3456" required pattern="[0-9]{16}">
                 <label for="name">Cardholder's Name</label>
-                <input type="text" id="name" placeholder="name">
+                <input type="text" id="name" placeholder="name" required pattern="[A-Za-z\s]+">
                 <label for="expiry">Expiry date</label>
-                <input type="text" id="expiry" placeholder="MM/AA">
+                <input type="date" id="expiry" placeholder="MM/AA" required pattern="^(0[1-9]|1[0-2])/\d{2}$">
                 <label for="cvv">CVV</label>
-                <input type="text" id="cvv" placeholder="123">
+                <input type="text" id="cvv" placeholder="123" required pattern="^\d{3,4}$">
                 <button>Pay $ 40</button>
             </form>
         </div>
@@ -54,13 +54,13 @@
             <span>Delivery Information</span>
             <form>
                 <label for="card">Personnel information</label>
-                <input type="text" id="card" placeholder="Full Name">
+                <input type="text" id="card" placeholder="Full Name" required pattern="[A-Za-z\s]+">
                 <label for="name">Adresse</label>
-                <input type="text" id="name" placeholder="Adresse">
+                <input type="text" id="name" placeholder="Adresse" required>
                 <label for="expiry">Delivery date</label>
-                <input type="text" id="expiry" placeholder="MM/AA">
+                <input type="text" id="expiry" placeholder="MM/AA" required pattern="^(0[1-9]|1[0-2])\/\d{2}$">
                 <label for="cvv">Poste code</label>
-                <input type="text" id="cvv" placeholder="12345">
+                <input type="text" id="cvv" placeholder="12345" required pattern="^\d{5}$">
                 <button>Follow-up of the delivery</button>
             </form>
         </div>
@@ -68,7 +68,7 @@
             <span>Vérification du statut de livraison</span>
             <form id="statusForm">
                 <label for="orderNumber">Numéro de commande : </label>
-                <input type="text" id="orderNumber" name="orderNumber" placeholder="Entrez le numéro de commande" required>
+                <input type="text" id="orderNumber" name="orderNumber" placeholder="Entrez le numéro de commande" required pattern="[0-9]{5}">
                 <button type="submit">Vérifier le statut</button>
             </form>
             <div id="statusResult"></div>
@@ -95,5 +95,32 @@
         </div>
         </div>
     </footer>
+    <script>
+        // Validation des formulaires
+        const paymentForm = document.getElementById("paymentForm");
+        const deliveryForm = document.getElementById("deliveryForm");
+        const statusForm = document.getElementById("statusForm");
+
+        paymentForm.addEventListener("submit", function (event) {
+            if (!paymentForm.checkValidity()) {
+                event.preventDefault();
+                alert("Veuillez remplir correctement les informations de paiement.");
+            }
+        });
+
+        deliveryForm.addEventListener("submit", function (event) {
+            if (!deliveryForm.checkValidity()) {
+                event.preventDefault();
+                alert("Veuillez remplir correctement les informations de livraison.");
+            }
+        });
+
+        statusForm.addEventListener("submit", function (event) {
+            if (!statusForm.checkValidity()) {
+                event.preventDefault();
+                alert("Veuillez entrer un numéro de commande valide.");
+            }
+        });
+    </script>
 </body>
 </html>
