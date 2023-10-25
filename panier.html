@@ -171,8 +171,8 @@
         </div>
     </footer>
     <script>
-        // -------Remove-------//
-        let deleteButtons = document.querySelectorAll(".supression");
+            // -------Remove-------//
+            let deleteButtons = document.querySelectorAll(".supression");
         let ana = document.getElementsByClassName("product")
         let q=20;
         deleteButtons.forEach(function (delet) {
@@ -183,8 +183,7 @@
                 console.log(Number(total.value));
             });
         });
-
-        // -------incrementation et decrementation-------//
+         // -------incrementation et decrementation-------//
         let btnplus = document.querySelectorAll(".quantity-increment");
         let btnmoin = document.querySelectorAll(".quantity-decrement");
         let num = document.querySelectorAll(".quantity");
@@ -199,7 +198,6 @@
                     num[i].value--;
                     total.value = Number(total.value) - 20;
                 }
-
             });
         }
     </script>
