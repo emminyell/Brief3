@@ -96,12 +96,15 @@
         </div>
     </footer>
     <script>
-        // Validation des formulaires
+    // Validation des formulaires
+        const paymentForm = document.getElementById("paymentForm");
+        const deliveryForm = document.getElementById("deliveryForm");
         const statusForm = document.getElementById("statusForm");
-         statusForm.addEventListener("submit", function (event) {
-            if (!statusForm.checkValidity()) {
+
+        paymentForm.addEventListener("submit", function (event) {
+            if (!paymentForm.checkValidity()) {
                 event.preventDefault();
-                alert("Veuillez entrer un numéro de commande valide.");
+                alert("Veuillez remplir correctement les informations de paiement.");
             }
         });
     </script>
