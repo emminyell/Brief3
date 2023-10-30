@@ -15,7 +15,7 @@
 <body>
     <header>
         <nav>
-            <a href="Brief2.html">
+            <a href="index.html">
                 <div class="logo">You<span>Shope</span></div>
             </a>
             <div class="items">
@@ -174,12 +174,10 @@
             //-------Remove-------//
             let deleteButtons = document.querySelectorAll(".supression");
         let ana = document.getElementsByClassName("product")
-        let q=20;
         deleteButtons.forEach(function (delet) {
             delet.addEventListener("click", function () {
                 let product = delet.parentElement.parentElement;
                 product.parentElement.style.display = "none"
-                total -= itemCost;
             document.getElementById("btn-total").value = total;
             })});
             
