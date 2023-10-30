@@ -59,17 +59,3 @@ let btnSvg = document.querySelector("#burgerMenu");
                 alert("Veuillez remplir correctement les informations de paiement.");
             }
         });
-
-        deliveryForm.addEventListener("submit", function (event) {
-            if (!deliveryForm.checkValidity()) {
-                event.preventDefault();
-                alert("Veuillez remplir correctement les informations de livraison.");
-            }
-        });
-
-        statusForm.addEventListener("submit", function (event) {
-            if (!statusForm.checkValidity()) {
-                event.preventDefault();
-                alert("Veuillez entrer un numéro de commande valide.");
-            }
-        });
